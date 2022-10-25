@@ -8,10 +8,18 @@ function isEmpty(testString) {
 
 function tallyWord(word, textArray) {
   // ensure word is not empty
+  if (isEmpty(word)) {
+    return 0;
+  }
   // initialize tally
+  let tally = 0;
   // iterate over textArray
-    // if element is word
-    // add to tally
+  textArray.forEach(function(element) {
+    // if element is word, add to tally
+    if (element === word) {
+      tally += 1;
+    }
+  });
   return tally 
 }
 
@@ -22,13 +30,23 @@ function distinctWordCount(text) {
   // turn input text into an array using split
   const textArray = text.split(" ");
   // get distinct words & store into a second array
-  const disctinctWordsArray = new Set(textArray);
-  return disctinctWordsArray;
+  const distinctWordsSet = new Set(textArray);
+  // store into second array
+  const distinctWords = [];
+  distinctWordsSet.forEach(function(element) {
+    distinctWords.push(element);
+  });
+
   // initialize empty array tallyArray
+  tallyArray = [];
   // iterate over array of distinct words
+  distinctWords.forEach(function(word) {
     // tally each distinct word
     // add tally to tallyArray variable
-  // return [tallyArray, disctinctWordsArray]
+    tallyArray.push(tallyWord(word, textArray));
+  });
+
+  return [tallyArray, distinctWords]
 }
 
 function wordCounter(text) {

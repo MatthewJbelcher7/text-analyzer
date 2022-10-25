@@ -141,10 +141,27 @@ Expected Output: 0
 
 Test: "It should return an array of distinct words when block of text is submitted."
 Code: 
-const text = "This template includes pumkin placeholders. Lots of placeholders.";
+const text = "This template includes placeholders. Lots of placeholders.";
 distinctWordCount(text);
 Expected Output: [This, template, includes, placeholders., Lots, of]
 
+Test: "It should return array of two arrays: one with the distinct words and one with their corresponding tallies."
+Code: 
+const text = "This template includes placeholders. Lots of placeholders."
+distinctWordCount(text);
+Expected Output: [[1,1,1,2,1,1][This, template, includes, placeholders., Lots, of]]
+
+<!-- Tests for tallyWord -->
+
+Describe: tallyWord
+
+Test: "It should return a count of how many times a word appears in a text array."
+Code:
+const word = "red" 
+const textArray = ["red","red","blue"]
+distinctWordCount(word, textArray);
+Expected Output: 2
+ 
 <!-- This template includes placeholders for:
 
 [x] Screenshots
