@@ -130,6 +130,21 @@ const text = "hello there";
 boldPassage(word, text);
 Expected Output: <p><strong>hello</strong> there</p>
 
+<!-- Tests for distinctWordCount -->
+Describe: distinctWordCount
+
+Test: "It should return null if text field was submitted empty"
+Code: 
+const text = "";
+distinctWordCount(text);
+Expected Output: 0
+
+Test: "It should return an array of distinct words when block of text is submitted."
+Code: 
+const text = "This template includes pumkin placeholders. Lots of placeholders.";
+distinctWordCount(text);
+Expected Output: [This, template, includes, placeholders., Lots, of]
+
 <!-- This template includes placeholders for:
 
 [x] Screenshots

@@ -6,16 +6,29 @@ function isEmpty(testString) {
 
 // Business Logic
 
-function tallyWord(word) {
+function tallyWord(word, textArray) {
   // ensure word is not empty
-  // tally distinct words
+  // initialize tally
+  // iterate over textArray
+    // if element is word
+    // add to tally
   return tally 
 }
 
 function distinctWordCount(text) {
-  // turn input text into an array
+  if (isEmpty(text)) {
+    return 0;
+  };
+  // turn input text into an array using split
+  const textArray = text.split(" ");
   // get distinct words & store into a second array
+  const disctinctWordsArray = new Set(textArray);
+  return disctinctWordsArray;
+  // initialize empty array tallyArray
   // iterate over array of distinct words
+    // tally each distinct word
+    // add tally to tallyArray variable
+  // return [tallyArray, disctinctWordsArray]
 }
 
 function wordCounter(text) {
